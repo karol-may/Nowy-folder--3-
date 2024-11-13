@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        body > div.tlo {
+            width: 100vw;
+            height: 50vh;
+        }
+        .niebo {
+            position: relative;
+            z-index: 400;
+            background-color: blue;
+        }
+        .ziemia {
+            position: relative;
+            z-index: 500;
+            background-color: green;
+        }
+        .slonce {
+            z-index: 450;
+            position: absolute;
+            top: 50vh;
+            left: 50vw;
+            width: 10vh;
+            height: 10vh;
+            border-radius: 100%;
+            background-color: yellow;
+            transform: translate(-50%,-50%);
+            animation: widnokrag 6s infinite ease-in-out;
+        }
+
+        @keyframes widnokrag {
+            0% { left: 20vw; }
+            25% { top: 20vh; }
+            50% { left: 80vw; top: 50vh}
+            75% { top: 70vh;}
+            100% { left: 20vw; top: 50vh}
+        }
+    </style>
+</head>
+<body>
+    <div class="slonce"></div>
+    <div class="niebo tlo"></div>
+    <div class="ziemia tlo"></div>    
+</body>
+</html>
